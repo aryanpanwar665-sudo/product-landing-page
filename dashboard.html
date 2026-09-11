@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Results Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Header -->
+        <header class="dashboard-header">
+            <div class="header-content">
+                <h1>📊 Results Dashboard</h1>
+                <p class="subtitle">Real-time Performance Metrics</p>
+            </div>
+            <div class="header-actions">
+                <button class="btn-refresh" onclick="refreshData()">🔄 Refresh</button>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="dashboard-main">
+            <!-- Stats Grid -->
+            <section class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon">📈</div>
+                    <h3>Total Revenue</h3>
+                    <p class="stat-value">$24,580</p>
+                    <p class="stat-change positive">↑ 12.5% this month</p>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon">👥</div>
+                    <h3>Active Users</h3>
+                    <p class="stat-value">3,420</p>
+                    <p class="stat-change positive">↑ 8.2% growth</p>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon">✅</div>
+                    <h3>Conversion Rate</h3>
+                    <p class="stat-value">4.8%</p>
+                    <p class="stat-change positive">↑ 2.1% improvement</p>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon">⭐</div>
+                    <h3>Avg. Rating</h3>
+                    <p class="stat-value">4.7/5</p>
+                    <p class="stat-change neutral">Based on 1,250 reviews</p>
+                </div>
+            </section>
+
+            <!-- Charts Section -->
+            <section class="charts-section">
+                <div class="chart-container">
+                    <h2>Weekly Performance</h2>
+                    <div class="mini-chart">
+                        <div class="bar" style="height: 45%;"><span>Mon</span></div>
+                        <div class="bar" style="height: 60%;"><span>Tue</span></div>
+                        <div class="bar" style="height: 55%;"><span>Wed</span></div>
+                        <div class="bar" style="height: 75%;"><span>Thu</span></div>
+                        <div class="bar" style="height: 80%;"><span>Fri</span></div>
+                        <div class="bar" style="height: 90%;"><span>Sat</span></div>
+                        <div class="bar" style="height: 70%;"><span>Sun</span></div>
+                    </div>
+                </div>
+
+                <div class="chart-container">
+                    <h2>Distribution</h2>
+                    <div class="donut-chart">
+                        <svg viewBox="0 0 120 120">
+                            <circle cx="60" cy="60" r="50" fill="none" stroke="#FF6B6B" stroke-width="15" stroke-dasharray="78.5 314" stroke-dashoffset="0"></circle>
+                            <circle cx="60" cy="60" r="50" fill="none" stroke="#4ECDC4" stroke-width="15" stroke-dasharray="62.8 314" stroke-dashoffset="-78.5"></circle>
+                            <circle cx="60" cy="60" r="50" fill="none" stroke="#45B7D1" stroke-width="15" stroke-dasharray="157 314" stroke-dashoffset="-141.3"></circle>
+                        </svg>
+                        <div class="donut-legend">
+                            <p><span class="legend-dot" style="background: #FF6B6B;"></span>Product A: 25%</p>
+                            <p><span class="legend-dot" style="background: #4ECDC4;"></span>Product B: 20%</p>
+                            <p><span class="legend-dot" style="background: #45B7D1;"></span>Product C: 55%</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Recent Activity -->
+            <section class="recent-activity">
+                <h2>Recent Activity</h2>
+                <div class="activity-list">
+                    <div class="activity-item">
+                        <div class="activity-icon">🛒</div>
+                        <div class="activity-content">
+                            <p class="activity-title">New Purchase</p>
+                            <p class="activity-time">2 minutes ago</p>
+                        </div>
+                        <p class="activity-value">+$450</p>
+                    </div>
+
+                    <div class="activity-item">
+                        <div class="activity-icon">📝</div>
+                        <div class="activity-content">
+                            <p class="activity-title">New Signup</p>
+                            <p class="activity-time">15 minutes ago</p>
+                        </div>
+                        <p class="activity-value">+1</p>
+                    </div>
+
+                    <div class="activity-item">
+                        <div class="activity-icon">💬</div>
+                        <div class="activity-content">
+                            <p class="activity-title">Customer Review</p>
+                            <p class="activity-time">1 hour ago</p>
+                        </div>
+                        <p class="activity-value">⭐⭐⭐⭐⭐</p>
+                    </div>
+
+                    <div class="activity-item">
+                        <div class="activity-icon">📧</div>
+                        <div class="activity-content">
+                            <p class="activity-title">Newsletter Signup</p>
+                            <p class="activity-time">3 hours ago</p>
+                        </div>
+                        <p class="activity-value">+12</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="dashboard-footer">
+            <p>Last updated: <span id="last-update">Just now</span></p>
+        </footer>
+    </div>
+
+    <script src="dashboard.js"></script>
+</body>
+</html>
